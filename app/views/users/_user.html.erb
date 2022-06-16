@@ -1,0 +1,11 @@
+<div><%= user.name %></div>
+<div><%= user.email %></div>
+
+<div><strong>Favorite foods:</strong></div>
+<ul>
+  <% user.foods.each do |food| %>
+    <li><%= food.name %></li>
+  <% end %>
+</ul>
+
+<hr />
