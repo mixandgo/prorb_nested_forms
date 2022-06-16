@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:name, :email, food_ids: [])
+      params.require(:user).permit(:name, :email, food_ids: [],
+notes_attributes: [:body])
     end
 end

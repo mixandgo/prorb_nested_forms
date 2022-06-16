@@ -13,6 +13,11 @@
     <%= form.collection_check_boxes(:food_ids, Food.all, :id, :name) %>
   </div>
   <div>
+    <%= form.fields_for :notes, Note.new do |notes_form| %>
+      <%= notes_form.text_area :body %>
+    <% end %>
+  </div>
+  <div>
     <%= form.submit "Save" %>
   </div>
 <% end %>

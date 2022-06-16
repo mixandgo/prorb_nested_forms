@@ -7,5 +7,10 @@
     <li><%= food.name %></li>
   <% end %>
 </ul>
-
+<div>
+  <% user.notes.each do |note| %>
+    <%= note.body %>
+    <br />
+  <% end %>
+</div>
 <hr />
