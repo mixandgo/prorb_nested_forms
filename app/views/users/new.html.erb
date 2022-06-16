@@ -10,9 +10,7 @@
     <%= form.email_field :email %>
   </div>
   <div>
-    <%= form.collection_check_boxes(:food_ids, Food.all, :id, :name) do |food| %>
-      <%= food.label { food.check_box + " " + food.object.name } %>
-    <% end %>
+    <%= form.collection_check_boxes(:food_ids, Food.all, :id, :name) %>
   </div>
   <div>
     <%= form.submit "Save" %>
